@@ -23,10 +23,11 @@ L.Control.ListMarkers = L.Control.extend({
 
 	options: {		
 		layer: false,
-		maxItems: 10,
+		maxItems: 20,
 		collapsed: false,		
 		label: 'title',
 		iconUrl: L.Icon.Default.imagePath+'/marker-icon.png',
+		itemArrow: '&#10148;',	//visit: http://character-code.com/arrows-html-codes.php
 		maxZoom: 9,
 		position: 'bottomleft'
 	},
@@ -79,8 +80,9 @@ L.Control.ListMarkers = L.Control.extend({
 		if( layer.options.hasOwnProperty(this.options.label) )
 		{
 			a.innerHTML = '<img src="'+this.options.iconUrl+'" />'+
-					'<span>'+layer.options[this.options.label]+'</span> <b>&gt;</b>';
+					'<span>'+layer.options[this.options.label]+'</span> <b>'+this.options.itemArrow+'</b>';
 			//TODO use related marker icon!
+			//TODO use template for item
 		}
 		else
 			console.log("propertyName '"+this.options.label+"' not found in marker");

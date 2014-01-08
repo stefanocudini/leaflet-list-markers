@@ -1,3 +1,4 @@
 Tasks found in: src/leaflet-list-markers.js
-    [Line: 67] [low] 			//TODO use related marker icon!
-    [Line: 129] [low] 			// TODO keyboard accessibility
+    [Line: 68] [low] 			//TODO use related marker icon!
+    [Line: 69] [low] 			//TODO use template for item
+    [Line: 131] [low] 			// TODO keyboard accessibility

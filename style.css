@@ -4,7 +4,7 @@ body {
 	font-family:Arial;
 }
 body#home {
-	/*background:url('images/back.png') no-repeat top left #b5d0d0;*/
+	background:url('images/back.png') no-repeat top left #b5d0d0;
 	margin-left:150px;
 }
 
@@ -35,7 +35,7 @@ h3 a:hover {
 	box-shadow: 0 0 8px #999;
 	float:left;
 	width:600px;
-	height:400px;	
+	height:350px;	
 }
 ul {
 	font-size:.85em;
