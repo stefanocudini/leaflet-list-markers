@@ -1,3 +1,19 @@
+/* 
+ * Leaflet List Markers v0.0.1 - 2014-01-08 
+ * 
+ * Copyright 2014 Stefano Cudini 
+ * stefano.cudini@gmail.com 
+ * http://labs.easyblog.it/ 
+ * 
+ * Licensed under the MIT license. 
+ * 
+ * Demo: 
+ * http://labs.easyblog.it/maps/leaflet-list-markers/ 
+ * 
+ * Source: 
+ * git@github.com:stefanocudini/leaflet-list-markers.git 
+ * 
+ */
 
 (function() {
 

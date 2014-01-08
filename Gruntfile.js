@@ -9,6 +9,7 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-todos');
+grunt.loadNpmTasks('grunt-svg2png');
 
 grunt.initConfig({
 	pkg: grunt.file.readJSON('package.json'),
@@ -17,7 +18,7 @@ grunt.initConfig({
 		'/* \n'+
 		' * Leaflet List Markers v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> \n'+
 		' * \n'+
-		' * Copyright 2014 <%= pkg.author.name %> \n'+
+		' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> \n'+
 		' * <%= pkg.author.email %> \n'+
 		' * <%= pkg.author.url %> \n'+
 		' * \n'+
@@ -89,6 +90,13 @@ grunt.initConfig({
 			}
 		}
 	},
+    svg2png: {
+        all: {
+            files: [
+                { src: ['images/*.svg'], dest: 'images/' }
+            ]
+        }
+    },	
 	todos: {
 		options: { verbose: false },
 		TODO: ['src/*.js'],
@@ -108,6 +116,7 @@ grunt.registerTask('default', [
 	'cssmin',
 	'jshint',
 	'uglify',
+	'svg2png',
 	'todos'
 ]);
 
