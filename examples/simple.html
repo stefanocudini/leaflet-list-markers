@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<link rel="stylesheet" href="/maps/leaflet-0.7/leaflet.css" />
+<link rel="stylesheet" href="../src/leaflet-list-markers.css" />
+<link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+<h3><a href="../"><big>◄</big> Leaflet List Markers</a></h3>
+
+<h4>Simple Example: <em>Center random italy citi and show visible markers</em></h4>
+<div id="map"></div>
+
+<script src="/maps/leaflet-0.7/leaflet.js"></script>
+<script src="../src/leaflet-list-markers.js"></script>
+<script src="cities-italy.js"></script>
+<script>
+
+	var map = new L.Map('map', {zoom: 10, center: L.latLng(cities[Math.floor(Math.random() * cities.length)].loc) });	//set center from first location
+
+	map.addLayer(new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'));	//base layer
+
+	var markersLayer = new L.LayerGroup();	//layer contain searched elements
+	map.addLayer(markersLayer);
+
+	////////////populate map from cities-italy.js
+	for(var i in cities)
+		L.marker(L.latLng(cities[i].loc), {title: cities[i].name}).addTo( markersLayer );
+
+	//TODO make example using label option with pop fields
+
+	map.addControl( new L.Control.ListMarkers({layer: markersLayer}) );
+	//inizialize Leaflet List Markers
+
+</script>
+
+<div id="copy"><a href="http://labs.easyblog.it/">Labs</a> &bull; <a rel="author" href="http://labs.easyblog.it/stefano-cudini/">Stefano Cudini</a></div>
+	
+</body>
+</html>
