@@ -19,7 +19,7 @@
 <script src="cities-italy.js"></script>
 <script>
 
-	var map = new L.Map('map', {zoom: 10, center: L.latLng(cities[Math.floor(Math.random() * cities.length)].loc) });	//set center from first location
+	var map = new L.Map('map', {zoom: 10, minZoom:10, center: L.latLng(cities[Math.floor(Math.random() * cities.length)].loc) });	//set center from first location
 
 	map.addLayer(new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'));	//base layer
 
@@ -31,8 +31,8 @@
 		L.marker(L.latLng(cities[i].loc), {title: cities[i].name}).addTo( markersLayer );
 
 	//TODO make example using label option with pop fields
-
-	map.addControl( new L.Control.ListMarkers({layer: markersLayer}) );
+var list = new L.Control.ListMarkers({layer: markersLayer});
+	map.addControl( list );
 	//inizialize Leaflet List Markers
 
 </script>

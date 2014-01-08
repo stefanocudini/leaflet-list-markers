@@ -102,9 +102,14 @@ grunt.initConfig({
 		TODO: ['src/*.js'],
 	},	
 	watch: {
+		images: {
+			options: { livereload: true },
+			files: ['images/*.svg'],
+			tasks: ['svg2png']						
+		},
 		dist: {
 			options: { livereload: true },
-			files: ['src/*'],
+			files: ['src/*','examples/*.html'],
 			tasks: ['clean','concat','cssmin','jshint']
 		}		
 	}
