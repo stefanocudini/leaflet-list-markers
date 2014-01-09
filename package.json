@@ -1,7 +1,7 @@
 {
   "name": "leaflet-list-markers",
   "version": "0.0.1",
-  "description": "A Leaflet Control for tracking your position in realtime by GPS",
+  "description": "Leaflet Control for listing visible markers/features in a interactive box",
   "repository": {
     "type": "git",
     "url": "git@github.com:stefanocudini/leaflet-list-markers.git"
