@@ -2,7 +2,7 @@ Leaflet List Markers
 ============
 
 #What
-A Leaflet Control for listing visible markers/features in a interactive box
+A Leaflet Control for listing visible markers/features in the map
 
 Tested in Leaflet 0.7.1
 
@@ -15,15 +15,7 @@ Tested in Leaflet 0.7.1
 **Source code:**  
 [Github](https://github.com/stefanocudini/leaflet-list-markers)
 
-#Build
-
-Since Version 1.4.7 this plugin support [Grunt](http://gruntjs.com/) for building process.
-Therefore the deployment require [NPM](https://npmjs.org/) installed in your system.
-After you've made sure to have npm working, run this in command line:
-```
-npm install
-grunt
-```
+![Image](https://raw.githubusercontent.com/stefanocudini/leaflet-list-markers/master/images/list-markers.jpg)
 
 #How
 Include leaflet-list-markers.css to page
@@ -37,4 +29,14 @@ map.addControl( new L.Control.ListMarkers({layer: markersLayer}) );
 short way:
 ```
 var map = new L.Map('map', { listMarkersControl: {layer: markersLayer} });
+```
+
+#Build
+
+Since Version 1.4.7 this plugin support [Grunt](http://gruntjs.com/) for building process.
+Therefore the deployment require [NPM](https://npmjs.org/) installed in your system.
+After you've made sure to have npm working, run this in command line:
+```
+npm install
+grunt
 ```
