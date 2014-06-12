@@ -19,7 +19,7 @@
 <script src="cities-italy.js"></script>
 <script>
 
-	var map = new L.Map('map', {zoom: 10, minZoom:10, center: L.latLng(cities[Math.floor(Math.random() * cities.length)].loc) });	//set center from first location
+	var map = new L.Map('map', {zoom: 10, minZoom:10, center: L.latLng(43.90974,10.2419) });	//set center from first location
 
 	map.addLayer(new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'));	//base layer
 
