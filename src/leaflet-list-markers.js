@@ -10,7 +10,7 @@ L.Control.ListMarkers = L.Control.extend({
 		maxItems: 20,
 		collapsed: false,		
 		label: 'title',
-		icon: L.Icon.Default.imagePath+'/marker-icon.png',
+		itemIcon: L.Icon.Default.imagePath+'/marker-icon.png',
 		itemArrow: '&#10148;',	//visit: http://character-code.com/arrows-html-codes.php
 		maxZoom: 9,
 		position: 'bottomleft'
@@ -51,7 +51,7 @@ L.Control.ListMarkers = L.Control.extend({
 
 		var li = L.DomUtil.create('li', 'list-markers-li'),
 			a = L.DomUtil.create('a', '', li),
-			icon = this.options.icon ? '<img src="'+this.options.icon+'" />' : '';
+			icon = this.options.itemIcon ? '<img src="'+this.options.itemIcon+'" />' : '';
 
 		a.href = '#';
 		L.DomEvent

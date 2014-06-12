@@ -1,5 +1,5 @@
 /* 
- * Leaflet List Markers v0.0.1 - 2014-01-08 
+ * Leaflet List Markers v0.0.2 - 2014-06-12 
  * 
  * Copyright 2014 Stefano Cudini 
  * stefano.cudini@gmail.com 
@@ -26,10 +26,11 @@ L.Control.ListMarkers = L.Control.extend({
 		maxItems: 20,
 		collapsed: false,		
 		label: 'title',
-		iconUrl: L.Icon.Default.imagePath+'/marker-icon.png',
+		itemIcon: L.Icon.Default.imagePath+'/marker-icon.png',
 		itemArrow: '&#10148;',	//visit: http://character-code.com/arrows-html-codes.php
 		maxZoom: 9,
 		position: 'bottomleft'
+		//TODO autocollapse
 	},
 
 	initialize: function(options) {
@@ -65,7 +66,8 @@ L.Control.ListMarkers = L.Control.extend({
 	_createItem: function(layer) {
 
 		var li = L.DomUtil.create('li', 'list-markers-li'),
-			a = L.DomUtil.create('a', '', li);
+			a = L.DomUtil.create('a', '', li),
+			icon = this.options.itemIcon ? '<img src="'+this.options.itemIcon+'" />' : '';
 
 		a.href = '#';
 		L.DomEvent
@@ -79,8 +81,7 @@ L.Control.ListMarkers = L.Control.extend({
 
 		if( layer.options.hasOwnProperty(this.options.label) )
 		{
-			a.innerHTML = '<img src="'+this.options.iconUrl+'" />'+
-					'<span>'+layer.options[this.options.label]+'</span> <b>'+this.options.itemArrow+'</b>';
+			a.innerHTML = icon+'<span>'+layer.options[this.options.label]+'</span> <b>'+this.options.itemArrow+'</b>';
 			//TODO use related marker icon!
 			//TODO use template for item
 		}

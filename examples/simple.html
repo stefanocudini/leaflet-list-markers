@@ -31,9 +31,12 @@
 		L.marker(L.latLng(cities[i].loc), {title: cities[i].name}).addTo( markersLayer );
 
 	//TODO make example using label option with pop fields
-var list = new L.Control.ListMarkers({layer: markersLayer, icon: null});
-	map.addControl( list );
+	
 	//inizialize Leaflet List Markers
+	var list = new L.Control.ListMarkers({layer: markersLayer, itemIcon: null});
+	
+	map.addControl( list );
+	
 
 </script>
 
