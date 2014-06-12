@@ -1,5 +1,5 @@
 Tasks found in: src/leaflet-list-markers.js
     [Line: 17] [low] 		//TODO autocollapse
-    [Line: 69] [low] 			//TODO use related marker icon!
-    [Line: 70] [low] 			//TODO use template for item
-    [Line: 132] [low] 			// TODO keyboard accessibility
+    [Line: 78] [low] 			//TODO use related marker icon!
+    [Line: 79] [low] 			//TODO use template for item
+    [Line: 141] [low] 			// TODO keyboard accessibility

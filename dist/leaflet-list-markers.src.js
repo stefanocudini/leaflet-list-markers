@@ -67,7 +67,8 @@ L.Control.ListMarkers = L.Control.extend({
 
 		var li = L.DomUtil.create('li', 'list-markers-li'),
 			a = L.DomUtil.create('a', '', li),
-			icon = this.options.itemIcon ? '<img src="'+this.options.itemIcon+'" />' : '';
+			icon = this.options.itemIcon ? '<img src="'+this.options.itemIcon+'" />' : '',
+			that = this;
 
 		a.href = '#';
 		L.DomEvent
@@ -75,7 +76,15 @@ L.Control.ListMarkers = L.Control.extend({
 			.on(a, 'click', L.DomEvent.stop, this)
 			.on(a, 'click', function(e) {
 				this._moveTo( layer.getLatLng() );
-			}, this);
+			}, this)
+			.on(a, 'mouseover', function(e) {
+				that.fire('item-mouseover', {layer: layer });
+			}, this)
+			.on(a, 'mouseout', function(e) {
+				that.fire('item-mouseout', {layer: layer });
+			}, this);			
+
+			
 		
 		//console.log('_createItem',layer.options);
 
