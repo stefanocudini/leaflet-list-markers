@@ -3,7 +3,7 @@
 
 L.Control.ListMarkers = L.Control.extend({
 
-	includes: L.Mixin.Events,
+	includes: L.version[0]==='1' ? L.Evented.prototype : L.Mixin.Events,
 
 	options: {		
 		layer: false,

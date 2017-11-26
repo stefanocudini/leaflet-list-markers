@@ -1,7 +1,7 @@
 /* 
- * Leaflet List Markers v0.0.2 - 2014-06-12 
+ * Leaflet List Markers v0.1.0 - 2017-11-26 
  * 
- * Copyright 2014 Stefano Cudini 
+ * Copyright 2017 Stefano Cudini 
  * stefano.cudini@gmail.com 
  * http://labs.easyblog.it/ 
  * 
@@ -19,7 +19,7 @@
 
 L.Control.ListMarkers = L.Control.extend({
 
-	includes: L.Mixin.Events,
+	includes: L.version[0]==='1' ? L.Evented.prototype : L.Mixin.Events,
 
 	options: {		
 		layer: false,

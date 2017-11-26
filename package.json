@@ -1,6 +1,6 @@
 {
   "name": "leaflet-list-markers",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Leaflet Control for listing visible markers/features in a interactive box",
   "repository": {
     "type": "git",
