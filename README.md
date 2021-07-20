@@ -10,7 +10,7 @@ Tested in Leaflet 0.7.1
 #Where
 
 **Demos:**  
-[labs.easyblog.it/maps/leaflet-list-markers](http://labs.easyblog.it/maps/leaflet-list-markers/)
+[opengeo.tech/maps/leaflet-list-markers](https://opengeo.tech/maps/leaflet-list-markers/)
 
 **Source code:**  
 [Github](https://github.com/stefanocudini/leaflet-list-markers)
@@ -33,7 +33,7 @@ var map = new L.Map('map', { listMarkersControl: {layer: markersLayer} });
 
 #Build
 
-Since Version 1.4.7 this plugin support [Grunt](http://gruntjs.com/) for building process.
+Since Version 1.4.7 this plugin support [Grunt](https://gruntjs.com/) for building process.
 Therefore the deployment require [NPM](https://npmjs.org/) installed in your system.
 After you've made sure to have npm working, run this in command line:
 ```

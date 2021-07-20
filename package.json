@@ -6,11 +6,11 @@
     "type": "git",
     "url": "git@github.com:stefanocudini/leaflet-list-markers.git"
   },
-  "homepage": "http://labs.easyblog.it/maps/leaflet-list-markers/",
+  "homepage": "https://opengeo.tech/maps/leaflet-list-markers/",
   "author": {
     "name": "Stefano Cudini",
     "email": "stefano.cudini@gmail.com",
-    "url": "http://labs.easyblog.it/"
+    "url": "https://opengeo.tech/"
   },
   "license": "MIT",
   "keywords": [

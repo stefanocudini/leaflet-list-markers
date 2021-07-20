@@ -3,12 +3,12 @@
  * 
  * Copyright 2017 Stefano Cudini 
  * stefano.cudini@gmail.com 
- * http://labs.easyblog.it/ 
+ * https://opengeo.tech/ 
  * 
  * Licensed under the MIT license. 
  * 
  * Demo: 
- * http://labs.easyblog.it/maps/leaflet-list-markers/ 
+ * https://opengeo.tech/maps/leaflet-list-markers/ 
  * 
  * Source: 
  * git@github.com:stefanocudini/leaflet-list-markers.git 
@@ -27,7 +27,7 @@ L.Control.ListMarkers = L.Control.extend({
 		collapsed: false,		
 		label: 'title',
 		itemIcon: L.Icon.Default.imagePath+'/marker-icon.png',
-		itemArrow: '&#10148;',	//visit: http://character-code.com/arrows-html-codes.php
+		itemArrow: '&#10148;',	//visit: https://character-code.com/arrows-html-codes.php
 		maxZoom: 9,
 		position: 'bottomleft'
 		//TODO autocollapse
